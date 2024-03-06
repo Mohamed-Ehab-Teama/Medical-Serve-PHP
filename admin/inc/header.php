@@ -1,10 +1,17 @@
+<?php
+if (!isset($_SESSION['admin_name'])) {
+    header("location:" . BURLA . "login.php");
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Medical Project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
@@ -55,6 +62,9 @@
                             <li><a class="dropdown-item" href="<?php echo BURLA . 'admins/add.php' ?>">Add</a></li>
                             <li><a class="dropdown-item" href="#">View all</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo BURLA . 'logout.php'; ?>">LogOut</a>
                     </li>
                 </ul>
             </div>
