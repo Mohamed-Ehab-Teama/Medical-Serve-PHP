@@ -28,3 +28,13 @@ function passCheckLength($value){
     }
     return True;
 }
+
+
+// Check minuim length 
+function CheckMinuim($value,$length){
+
+    if( trim( strlen($value) <= $length ) ){
+        return false;
+    }
+    return true;
+}

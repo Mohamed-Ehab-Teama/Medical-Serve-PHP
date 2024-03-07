@@ -33,8 +33,8 @@ if (!isset($_SESSION['admin_name'])) {
                             Cities
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Add</a></li>
-                            <li><a class="dropdown-item" href="#">View all</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BURLA . 'cities/add.php'; ?>">Add</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BURLA . 'cities/index.php'; ?>">View all</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
