@@ -31,6 +31,21 @@ function db_insert($sql)
 }
 
 
+function db_update($sql)
+{
+
+    global $conn;
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        return "Data Updated Successfully";
+    }
+    return false;
+}
+
+
+
+
 
 // Get data from database
 function getRow($table, $filed, $value)
