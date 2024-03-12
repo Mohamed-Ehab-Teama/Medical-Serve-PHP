@@ -48,11 +48,11 @@ function db_update($sql)
 
 
 // Get data from database
-function getRow($table, $filed, $value)
+function getRow($table, $field, $value)
 {
     global $conn;
 
-    $sql = "SELECT * FROM `$table` WHERE `$filed` = '$value' ";
+    $sql = "SELECT * FROM `$table` WHERE `$field` = '$value' ";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -67,6 +67,25 @@ function getRow($table, $filed, $value)
     }
     return false;
 }
+
+// Delete Row from database
+function deleteRow($table,$field,$value)
+{
+    global $conn;
+
+    $sql = "DELETE FROM `$table` WHERE `$field` = '$value' ";
+    $result = mysqli_query($conn,$sql);
+
+    if($result){
+
+        return true;
+    }else{
+
+        return false;
+    }
+}
+
+
 
 
 // Get Rows From Database:

@@ -25,7 +25,7 @@
                         <td class="text-center"> <?php echo $row['city_name']; ?> </td>
                         <td class="text-center">
                             <a href="<?php echo BURLA . 'cities/edit.php?id=' . $row['city_id']; ?>" class="btn btn-info">Edit</a>
-                            <a href="" class="btn btn-danger delete">Delete</a>
+                            <a href=" <?php echo BURLA . 'cities/delete.php?id=' . $row['city_id']; ?> " class="btn btn-danger delete">Delete</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -35,7 +35,6 @@
 </div>
 
 
-<!-- <a href="" class="btn btn-danger delete" data-field="city_id" data_id=" <?php echo $row['city_id']; ?>" data_table="cities">Delete</a> -->
 
 
 <?php require BLA . 'inc/footer.php'; ?>

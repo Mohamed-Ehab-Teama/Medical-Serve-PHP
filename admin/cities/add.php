@@ -19,6 +19,7 @@ require BL . 'functions/validation.php';
 
                 $sql = "INSERT INTO cities (`city_name`) VALUES ('$city')";
                 $success_message = db_insert($sql);
+                header("refresh:1;");
 
 
             }
