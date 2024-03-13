@@ -60,7 +60,7 @@ if (!isset($_SESSION['admin_name'])) {
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="<?php echo BURLA . 'admins/add.php' ?>">Add</a></li>
-                            <li><a class="dropdown-item" href="#">View all</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BURLA . "admins/index.php" ?>">View all</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
