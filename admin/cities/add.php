@@ -4,46 +4,33 @@ require BLA . 'inc/header.php';
 require BL . 'functions/validation.php';
 ?>
 
-<?php 
+<?php
 
-    if(isset($_POST['submit']))
-    {
+if (isset($_POST['submit'])) {
 
-        $city = $_POST['city_name'];
+    $city = $_POST['city_name'];
 
-        if(!checkEmpty($city))
-        {
+    if (!checkEmpty($city)) {
 
-            if(CheckMinuim($city,3))
-            {
+        if (CheckMinuim($city, 3)) {
 
-                $sql = "INSERT INTO cities (`city_name`) VALUES ('$city')";
-                $success_message = db_insert($sql);
-                header("refresh:1;");
-
-
-            }
-            else
-            {
-                $error_message = "City Name cannot be less than 3 characters";
-            }
-
+            $sql = "INSERT INTO cities (`city_name`) VALUES ('$city')";
+            $success_message = db_insert($sql);
+            // header("refresh:1;url=" . BURLA . "cities/add.php");
+        } else {
+            $error_message = "City Name cannot be less than 3 characters";
         }
-        else
-        {
-            $error_message = "City Name Cannot Be Empty!";
-        }
+    } else {
+        $error_message = "City Name Cannot Be Empty!";
+    }
 
 
 
 
     require BL . 'functions/messages.php';
-
-    }
-    else
-    {
-        $error_message = "SomeThing Went Wrong !!!!!!!!";
-    }
+} else {
+    $error_message = "SomeThing Went Wrong !!!!!!!!";
+}
 
 
 

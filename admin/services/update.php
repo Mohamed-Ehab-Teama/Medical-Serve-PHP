@@ -10,22 +10,20 @@ require BL . 'functions/validation.php';
 
 if (isset($_POST['submit'])) {
 
-    $city = $_POST['city_name'];
-    $city_id = $_POST['city_id'];
+    $service = $_POST['service_name'];
+    $id = $_POST['service_id'];
 
-    if (!checkEmpty($city)) {
+    if (!checkEmpty($service)) {
 
-        if (CheckMinuim($city, 3)) {
+        if (CheckMinuim($service, 3)) {
 
-            $row = getRow('cities', 'city_id', $city_id);
+            $row = getRow('services', 'serv_id', $id);
 
             if ($row) {
 
-                $sql = "UPDATE `cities` SET `city_name` = '$city' WHERE `city_id` = '$city_id' ";
+                $sql = "UPDATE `services` SET `serv_name` = '$service' WHERE `serv_id` = '$id' ";
                 $success_message = db_update($sql);
-                // header("refresh:1;url=" . BURLA . "cities/index.php");
-
-
+                header("refresh:1;url=" . BURLA . "services/index.php");
             } else {
                 header("location:");
             }

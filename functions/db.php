@@ -69,17 +69,17 @@ function getRow($table, $field, $value)
 }
 
 // Delete Row from database
-function deleteRow($table,$field,$value)
+function deleteRow($table, $field, $value)
 {
     global $conn;
 
     $sql = "DELETE FROM `$table` WHERE `$field` = '$value' ";
-    $result = mysqli_query($conn,$sql);
+    $result = mysqli_query($conn, $sql);
 
-    if($result){
+    if ($result) {
 
         return true;
-    }else{
+    } else {
 
         return false;
     }
@@ -102,12 +102,31 @@ function getRows($table)
 
         if (mysqli_num_rows($result) > 0) {
 
-            while ($row = mysqli_fetch_assoc($result))
-            {
+            while ($row = mysqli_fetch_assoc($result)) {
                 $rows[] = $row;
             }
         }
     }
 
     return $rows;
+}
+
+
+
+
+
+// Get number of rows in table
+function NumOfRows($table, $id)
+{
+
+    global $conn;
+    $sql = "SELECT COUNT(`$id`) FROM $table";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+
+        $num = mysqli_fetch_array($result);
+    }
+
+    return $num[0];
 }

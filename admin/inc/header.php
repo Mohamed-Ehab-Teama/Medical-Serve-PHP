@@ -26,7 +26,7 @@ if (!isset($_SESSION['admin_name'])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="<?php echo BURLA . 'index.php'; ?>">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -42,8 +42,8 @@ if (!isset($_SESSION['admin_name'])) {
                             Services
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Add</a></li>
-                            <li><a class="dropdown-item" href="#">View all</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BURLA . 'services/add.php'; ?>">Add</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BURLA . 'services/index.php'; ?>">View all</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -62,6 +62,9 @@ if (!isset($_SESSION['admin_name'])) {
                             <li><a class="dropdown-item" href="<?php echo BURLA . 'admins/add.php' ?>">Add</a></li>
                             <li><a class="dropdown-item" href="<?php echo BURLA . "admins/index.php" ?>">View all</a></li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?php echo BURL . 'index.php'; ?>">View Site</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="<?php echo BURLA . 'logout.php'; ?>">LogOut</a>
