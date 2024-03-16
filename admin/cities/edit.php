@@ -13,7 +13,7 @@ if (isset($_GET['id']) and is_numeric($_GET['id'])) {
     if ($row) {
         $city_id = $_GET['id'];
     } else {
-        header("location:" . BURLA);
+        // header("location:" . BURLA);
     }
 } else {
     header("location:" . BURLA);

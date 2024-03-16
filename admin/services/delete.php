@@ -15,7 +15,7 @@ if (isset($_GET['id']) and is_numeric($_GET['id'])) {
     if ($check) {
 
         $success_message = "Data Deleted Successfully";
-        header("refresh:1;url=" . BURLA . "services/index.php ");
+        // header("refresh:1;url=" . BURLA . "services/index.php ");
         require BL . 'functions/messages.php';
     } else {
         $error_message = "Process Failed";

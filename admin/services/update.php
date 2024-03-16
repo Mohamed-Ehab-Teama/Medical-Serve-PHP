@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 
                 $sql = "UPDATE `services` SET `serv_name` = '$service' WHERE `serv_id` = '$id' ";
                 $success_message = db_update($sql);
-                header("refresh:1;url=" . BURLA . "services/index.php");
+                // header("refresh:1;url=" . BURLA . "services/index.php");
             } else {
                 header("location:");
             }

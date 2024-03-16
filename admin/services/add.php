@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 
             $sql = "INSERT INTO services (`serv_name`) VALUES ('$service')";
             $success_message = db_insert($sql);
-            header("refresh:1;");
+            // header("refresh:1;");
         } else {
             $error_message = "Service Name cannot be less than 3 characters";
         }

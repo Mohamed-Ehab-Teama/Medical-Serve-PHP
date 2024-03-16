@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
                 $sql = "INSERT INTO admins (`admin_name`,`admin_email`,`admin_password`) VALUES ('$name','$email','$new_password') ";
 
                 $success_message = db_insert($sql);
-                header("refresh:1;url=" . BURLA ."admins/add.php");
+                // header("refresh:1;url=" . BURLA ."admins/add.php");
 
 
                 //
