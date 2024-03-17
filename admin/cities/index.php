@@ -22,7 +22,13 @@
                 <?php foreach ($data as $row) : ?>
                     <tr class="text-center">
                         <td scope="row"> <?php echo $x++; ?> </td>
-                        <td class="text-center"> <?php echo $row['city_name']; ?> </td>
+                        <td class="text-center">
+                            <?php
+                                if(isset($row)){
+                                echo $row['city_name']; 
+                                }
+                            ?>
+                        </td>
                         <td class="text-center">
                             <a href="<?php echo BURLA . 'cities/edit.php?id=' . $row['city_id']; ?>" class="btn btn-info">Edit</a>
                             <a href=" <?php echo BURLA . 'cities/delete.php?id=' . $row['city_id']; ?> " class="btn btn-danger delete">Delete</a>
