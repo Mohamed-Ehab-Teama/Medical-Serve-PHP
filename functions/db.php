@@ -130,3 +130,12 @@ function NumOfRows($table, $id)
 
     return $num[0];
 }
+
+
+
+// get data from two tables
+function getDataFromTwoTables($tble1,$table2){
+
+    $sql = "s";
+
+}

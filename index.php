@@ -33,7 +33,7 @@
                     <select name="service" class="form-select" aria-label="Default select example">
                         <?php $data = getRows('services'); ?>
                         <?php foreach ($data as $row) : ?>
-                            <option value="<?php echo $row['serv_name']; ?>"> <?php echo $row['serv_name']; ?> </option>
+                            <option value="<?php echo $row['serv_id']; ?>"> <?php echo $row['serv_name']; ?> </option>
                         <?php endforeach; ?>
                     </select>
                 </fieldset>
@@ -43,7 +43,7 @@
                     <select name="city" class="form-select" aria-label="Default select example">
                         <?php $data = getRows('cities'); ?>
                         <?php foreach ($data as $row) : ?>
-                            <option value="<?php echo $row['city_name']; ?>"> <?php echo $row['city_name']; ?> </option>
+                            <option value="<?php echo $row['city_id']; ?>"> <?php echo $row['city_name']; ?> </option>
                         <?php endforeach; ?>
                     </select>
                 </fieldset>
