@@ -3,7 +3,7 @@
 
 
 <style>
-    *{
+    * {
         font-size: 1rem;
     }
 </style>
@@ -30,6 +30,8 @@
                 $x = 1;
                 ?>
                 <?php foreach ($data as $row) : ?>
+                    <?php $data2 = getFieldName('cities', 'city_name', 'city_id', $row['order_city_id']); ?>
+                    <?php $data3 = getFieldName('services', 'serv_name', 'serv_id', $row['order_serve_id']); ?>
                     <tr class="text-center">
                         <td scope="row"> <?php echo $x++; ?> </td>
                         <td class="text-center">
@@ -37,6 +39,7 @@
                             if (isset($row)) {
                                 echo $row['order_name'];
                             }
+
                             ?>
                         </td>
                         <td>
@@ -44,6 +47,7 @@
                             if (isset($row)) {
                                 echo $row['order_email'];
                             }
+
                             ?>
                         </td>
                         <td>
@@ -51,20 +55,23 @@
                             if (isset($row)) {
                                 echo $row['order_mobile'];
                             }
+
                             ?>
                         </td>
                         <td>
                             <?php
                             if (isset($row)) {
-                                echo $row['order_serve_id'];
+                                echo $data3['serv_name'];
                             }
+
                             ?>
                         </td>
                         <td>
                             <?php
                             if (isset($row)) {
-                                echo $row['order_city_id'];
+                                echo $data2['city_name'];
                             }
+
                             ?>
                         </td>
                         <td>
@@ -72,6 +79,7 @@
                             if (isset($row)) {
                                 echo $row['order_notes'];
                             }
+
                             ?>
                         </td>
                         <td class="text-center">
@@ -80,8 +88,11 @@
                     </tr>
                 <?php endforeach; ?>
             </tbody>
+
         </table>
+
     </h3>
+
 </div>
 
 

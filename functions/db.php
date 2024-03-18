@@ -133,9 +133,31 @@ function NumOfRows($table, $id)
 
 
 
-// get data from two tables
-function getDataFromTwoTables($tble1,$table2){
 
-    $sql = "s";
+// function getCityName($field)
+// {
+//     global $conn;
 
+//     $sql = "SELECT `city_name` FROM `cities` WHERE `city_id` = $field";
+//     $result = mysqli_query($conn, $sql);
+
+//     if ($result) {
+
+//         $cityRow = mysqli_fetch_assoc($result);
+//         return $cityRow;
+//     }
+// }
+
+function getFieldName($table,$field,$col,$id)
+{
+    global $conn;
+
+    $sql = "SELECT `$field` FROM `$table` WHERE `$col` = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+
+        $cityRow = mysqli_fetch_assoc($result);
+        return $cityRow;
+    }
 }

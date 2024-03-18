@@ -30,9 +30,13 @@ require_once(BLA . 'inc/header.php');
     <a href="services/index.php" class="btn btn-info"><?php echo NumOfRows('services', 'serv_id'); ?></a>
 </div>
 <!--  All Orders  -->
-<!-- <div class="div-style"></div> -->
-<!--  All Orders This Day  -->
-<!-- <div class="div-style"></div> -->
+<div class="div-style">
+    <h3>All Orders</h3>
+    <p>The number of Orders existed now are: </p>
+    <br>
+    <a href="orders/index.php" class="btn btn-info"><?php echo NumOfRows('orders', 'order_id'); ?></a>
+</div>
+
 
 
 
