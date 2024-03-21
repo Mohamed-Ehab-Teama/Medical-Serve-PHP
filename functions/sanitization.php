@@ -7,6 +7,8 @@ we will apply in in the input of :
     - Add City
     - Add Service
 
+This to insure data cleanleness.
+
 */
 function cleanData($value){
 
