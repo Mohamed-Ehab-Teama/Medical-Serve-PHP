@@ -1,6 +1,7 @@
 <?php require 'config.php'; ?>
 <?php
 require 'functions/validation.php';
+require(BL . 'functions/sanitization.php');
 ?>
 
 <?php
@@ -8,7 +9,7 @@ require 'functions/validation.php';
 if (isset($_POST['submit'])) {
 
     foreach ($_POST as $key => $value) {
-        $$key = $value;
+        $$key = cleanData($value);
     }
 
     // echo $service;

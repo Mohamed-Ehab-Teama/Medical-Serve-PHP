@@ -2,13 +2,15 @@
 <?php
 require BLA . 'inc/header.php';
 require BL . 'functions/validation.php';
+require(BL . 'functions/sanitization.php'); 
 ?>
 
 <?php
 
 if (isset($_POST['submit'])) {
 
-    $city = $_POST['city_name'];
+    $city0 = $_POST['city_name'];
+    $city = cleanData($city0);
 
     if (!checkEmpty($city)) {
 

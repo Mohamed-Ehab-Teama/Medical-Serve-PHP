@@ -1,6 +1,7 @@
 <?php require_once('../../config.php'); ?>
 <?php require_once(BLA . 'inc/header.php'); ?>
 <?php require(BL . 'functions/validation.php'); ?>
+<?php require(BL . 'functions/sanitization.php'); ?>
 
 
 <?php
@@ -8,7 +9,7 @@
 if (isset($_POST['submit'])) {
 
     foreach ($_POST as $key => $value) {
-        $$key = $value;
+        $$key = cleanData($value);
     }
     // echo $name;
     // echo $email;

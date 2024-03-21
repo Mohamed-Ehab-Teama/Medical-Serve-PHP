@@ -2,13 +2,15 @@
 <?php
 require BLA . 'inc/header.php';
 require BL . 'functions/validation.php';
+require(BL . 'functions/sanitization.php'); 
 ?>
 
 <?php
 
 if (isset($_POST['submit'])) {
 
-    $service = $_POST['service_name'];
+    $service0 = $_POST['service_name'];
+    $service = cleanData($service0);
 
     if (!checkEmpty($service)) {
 
