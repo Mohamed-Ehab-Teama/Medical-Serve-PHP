@@ -15,6 +15,7 @@ if (isset($_POST['submit'])) {
     // echo $service;
     // echo $city;
     // echo $name;
+    $name = filter_var($name,FILTER_SANITIZE_STRING);
     // echo $email;
     // echo $phone;
     // echo $notes;
